@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+background: rgb(82,2,144);
+background: -moz-linear-gradient(200deg, rgba(82,2,144,1) 0%, rgba(36,1,63,1) 9%, rgba(0,0,0,1) 27%, rgba(0,0,0,1) 33%);
+background: -webkit-linear-gradient(200deg, rgba(82,2,144,1) 0%, rgba(36,1,63,1) 9%, rgba(0,0,0,1) 27%, rgba(0,0,0,1) 33%);
+background: linear-gradient(200deg, rgba(82,2,144,1) 0%, rgba(36,1,63,1) 0%, rgba(0,0,0,1) 57%, rgba(0,0,0,1) 12%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#520290",endColorstr="#000000",GradientType=1);
+background-repeat: no-repeat;
+}
+
+.gradient-border-bottom {
+  position: relative;
+  padding: 10px 20px;
+  background: black;
+  border-radius: 5px;
+}
+
+.gradient-border-bottom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background-image: linear-gradient(125deg, #520290, rgb(0, 0, 0));
+}
+
+.gradient-border-right {
+  position: relative;
+  padding: 10px 20px;
+  background: black;
+  border-radius: 5px;
+}
+
+.gradient-border-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, #520290, rgb(0, 0, 0));
+}
+
+.img-w-auto{
+  height: 200px;
+  width: auto; 
+}
+
+.scrollDefault {
+  scrollbar-width: thin;
+  scrollbar-color: #310057 #000000;
+}
+
+/* Chrome, Edge and Safari */
+.scrollDefault::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollDefault::-webkit-scrollbar-track {
+  border-radius: 16px;
+  background-color: #000000;
+}
+
+.scrollDefault::-webkit-scrollbar-track:hover {
+  background-color: #2B2D2D;
+}
+
+.scrollDefault::-webkit-scrollbar-track:active {
+  background-color: #200139;
+}
+
+.scrollDefault::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #520290;
+}
+
+.scrollDefault::-webkit-scrollbar-thumb:hover {
+  background-color: #6602B4;
+}
+
+.scrollDefault::-webkit-scrollbar-thumb:active {
+  background-color: #7B03D8;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
